@@ -1,0 +1,43 @@
+allocator> RQ P0 262144 W
+
+
+Process Successfully Added!
+allocator> RQ P1 262144 W
+
+
+Process Successfully Added!
+allocator> RQ P2 262200 W
+
+
+Process Successfully Added!
+allocator> STAT
+
+
+Addresses [0 : 262144] Process: P0
+Addresses [262145 : 524289] Process: P1
+Addresses [524290 : 786490] Process: P2
+Addresses [786491 :  END] Process: FREE
+allocator> RL P1
+
+
+P1 has been removed! 
+allocator> STAT
+
+
+Addresses [0 : 262144] Process: P0
+Addresses [262145 : 524289] Process: FREE
+Addresses [524290 : 786490] Process: P2
+Addresses [786491 :  END] Process: FREE
+allocator> C
+
+
+allocator> STAT
+
+
+Addresses [0 : 262144] Process: P0
+Addresses [524290 : 786490] Process: FREE
+Addresses [786491 : 1048691] Process: P2
+allocator> QUIT
+
+
+Goodbye
